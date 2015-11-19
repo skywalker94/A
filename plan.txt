@@ -1,0 +1,7 @@
+Main page - Quote + Title
+
+// Second - ResearchGuidance passage + Avenues
+
+// Third - About + Activities
+
+// Fourth - Contact Us

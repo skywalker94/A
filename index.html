@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<!--xmlns="http://www.w3.org/1999/xhtml"-->
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	
+	<link rel="icon" type="image/png" href="logo.ico">
+	<title>NOBLE</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage plugin by Alvaro Trigo. Create fullscreen pages fast and simple. One page scroll like iPhone website." />
+	<meta name="keywords"  content="fullpage,jquery,alvaro,trigo,plugin,fullscren,screen,full,iphone5,apple" />
+	<meta name="Resource-type" content="Document" />
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans+Caption' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="jquery.multiscroll.css" />		
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="vendors/jquery.easings.min.js"></script>
+	<script type="text/javascript" src="jquery.multiscroll.js"></script>
+
+	<script type="text/javascript">
+	 $(document).ready(function() {
+            $('#myContainer').multiscroll({
+            	sectionsColor: ['#777777', '#D6DB2E','#00ccaa', '#5FCF48'],
+            	anchors: ['home', 'guidance', 'about', 'contact'],
+            	menu: '#menu',
+            	navigation: true,
+            	navigationTooltips: ['Home', 'Guidance', 'About', 'Contact'],
+            	loopBottom: true,
+            	loopTop: true
+            });
+        });
+    </script>
+
+	<style>
+		.ms-section{
+			text-align: center;
+		}
+
+		#menu li {
+			display:inline-block;
+			margin: 10px;
+			color: #000;
+			background:#fff;
+			background: rgba(255,255,255, 0.3);
+			-webkit-border-radius: 10px; 
+		            border-radius: 10px; 
+		}
+		#menu li.active{
+			background:#666;
+			background: rgba(255,255,255, 1);
+			color: #000;
+		}
+		#menu li a{
+			text-decoration:none;
+			color: #000;
+		}
+		#menu li.active a:hover{
+			color: #000;
+		}
+		#menu li:hover{
+			background: rgba(255,255,255, 0.8);
+		}
+		#menu li a,
+		#menu li.active a{
+			padding: 9px 18px;
+			display:block;
+		}
+		#menu li.active a{
+			color: #000;
+		}
+		#menu{
+			position:fixed;
+			top:0;
+			left:0;
+			height: 40px;
+			z-index: 70;
+			width: 100%;
+			padding: 0;
+			margin:0;
+		}
+		body
+		{
+			zoom: 100%;
+			font-family: Open Sans;
+		}
+		p
+		{
+			text-align: justify;
+		}
+		.bar1
+		{
+			position: fixed;
+			z-index: 4;
+			height: .6%;
+			width: 65%;
+			right: 0%;
+			top: 2%;
+			background-color: white;
+			box-shadow: 5px;
+			color: white;
+		}
+		.bar2
+		{
+			position: fixed;
+			z-index: 4;
+			height: .5%;
+			width: 55%;
+			right: 0%;
+			top: 3.6%;
+			background-color: white;
+			box-shadow: 5px;
+			color: white;
+		}
+		.bar3
+		{
+			position: fixed;
+			z-index: 4;
+			height: .6%;
+			width: 35%;
+			right: 0%;
+			top: 5.1%;
+			background-color: white;
+			box-shadow: 5px;
+			color: white;
+		}
+		.bar4
+		{
+			position: fixed;
+			z-index: 4;
+			height: .6%;
+			width: 91%;
+			left: -1%;
+			top: 94%;
+			background-color: white;
+			box-shadow: 5px;
+			color: white;
+			text-align: right;
+		}
+		.bar5
+		{
+			position: fixed;
+			z-index: 4;
+			height: .5%;
+			width: 81%;
+			left: -1%;
+			top: 95.6%;
+			background-color: white;
+			box-shadow: 5px;
+			color: white;
+			text-align: right;
+		}
+		.boxbox
+		{
+			position: fixed;
+			right: 0%;
+			top: 44.6%;
+			height: 14%;
+			width: 3%;
+			opacity: .7;
+			background-color: white;
+			color: white;
+			z-index: 4;
+			box-shadow: 5px;
+		}
+		.mainimage
+		{
+			height: 18%;
+			top: 0%;
+			position: absolute;
+			right: 5%;
+			z-index: 5;
+		}
+	</style>
+
+</head>
+<body>
+
+
+<div id="pepe" style="z-index:5;"></div>
+<ul id="menu">
+	<li data-menuanchor="home"><a href="#home">Home</a></li>
+	<li data-menuanchor="guidance"><a href="#guidance">Guidance</a></li>
+	<li data-menuanchor="about"><a href="#about">About</a></li>
+	<li data-menuanchor="contact"><a href="#contact">Contact</a></li>
+</ul>
+<div class="boxbox"><font style="opacity:0;">.</font></div>
+<div class="bar1">. . . . .</div>
+<div class="bar2">.</div>
+<div class="bar3">. .</div>
+<div class="bar4">. . . .</div>
+<div class="bar5">. . .</div>
+<div class="logobox"></div>
+<div id="myContainer">
+<img src="imgs/noble_logo.png" class="mainimage">
+	<div class="ms-left">
+		<div class="ms-section" id="left1">
+			<font style="text-align:center; color:black">
+			
+				<h1><font style="font-size:120%;">NOBLE</font><br><font style="font-size:70%;">Institure of Research Guidance</font></h1>
+			</font>
+		</div>
+
+		<div class="ms-section" id="left2">
+			<table style="text-align:justify; font-family: Open Sans" cellpadding="25">
+			<tr><td style="text-align:center;"><h2 style=" font-family:PT Sans Caption">Research & Guidance</h2>
+			<br><p>Today, research has become a buzz word in academic fraternity. In every course of higher education there is a compulsory component of research.</p>
+			<p>Research is a process of collecting, analyzing and interpreting information to answer questions. It is a structured enquiry that utilizes acceptable scientific methodology to investigate in specific subject to solve problems and create new knowledge that is generally applicable. Research helps to establish facts or principles. We examine and explore various things in our daily life as well. However, the difference between our casual everyday exploration and educational research is that it holds the following characteristics: specific procedure, exactness, verifiability and validity. This controlled, rigorous, systematic process of collecting empirical and critical data can reveal unbiased and objective findings.</p>
+			<p>Social research refers to study conducted by social scientist in fields of social sciences and humanities. Different academic disciplines prefer different approaches, such as qualitative, quantitative, and experimental.</p></td></tr>
+			</table>
+		</div>
+
+		<div class="ms-section" id="left3">
+			<table style="text-align:justify; font-family: Open Sans" cellpadding="25">
+			<tr><td style="text-align:left;"><center><h2 style=" font-family:PT Sans Caption">In Short</h2></center><br>
+			<p>‘NOBLE Institute of Research Guidance’ helps the researcher to remain motivated during the process of research to ensure flawless and timely completion of the research project by providing necessary guidance to...</p>
+			<ul>
+			<li>Select topic of interest to sustain the required motivation</li>
+			<li>Select a specific and clear topic that one can manage within the available time and resources</li>
+			<li>Bring about clarity about the indicators and measurement of concepts in the study</li>
+			<li>Develop expertise in the investigator for the proposed task</li>
+			<li>Direct preparation of research tool</li>
+			<li>Analyse the data correctly</li>
+			<li>Ensure that the study is relevant and useful in policy formulation and generalisations</li>
+			<li>Ensure correct report-writing using appropriate language, etc.</li>
+			<li>Guide the entire process of research investigation</li>
+			</ul>
+			</td></tr></table>
+		</div>	
+
+		<div class="ms-section" id="left4">
+			<table style="font-family: Open Sans; text-align:center;" width="100%" cellpadding="25">
+			<tr><td><h2 style="text-align:center; font-family:PT Sans Caption">Reach Us</h2><br>
+				<p>				
+				<u>E-mail</u><br>noble2research@gmail.com<br><br>
+				<u>Address</u><br>24, Susmit, Sharada Nagar, Gangapur Road, Nashik- 422013, Maharashtra, India.<br><br>
+				<u>Contact</u><br>+91-96732-60062<br><br><br>
+				<u>Director</u><br>Dr.Nikhila Bhagwat<br>M.Sc. (Ext. Edu.), M.Sc. (Ext. Commu.), Ph.D., SET<br>
+				</p>
+			</td></tr></table>
+		</div>
+	</div>
+	
+	<div class="ms-right">
+		<div class="ms-section" id="right1" style="color: white">
+			<table style="text-align:justify; font-family: Open Sans" cellpadding="55">
+			<tr><td style="text-align:justify;">
+			<p style="font-size:130%; font-family: Open Sans; text-align: center">"Research is a structured enquiry that utilizes acceptable scientific methodology to solve problems and create new knowledge that is commonly applicable"</p>
+			</td></tr></table>
+		</div>
+
+		<div class="ms-section" id="right2">
+		<table style="font-family: Open Sans; text-align:center;" width="100%" cellpadding="25">
+			<tr><td><h2 style="text-align:center; font-family:PT Sans Caption">Process</h2><br>
+				<ul style="text-align:left">
+					<li>Formulate Research Problem</li>
+					<li>Extensive Literature Review</li>
+					<li>Device the Objectives</li>
+					<li>Prepare Research Design</li>
+					<li>Plan Sample Design</li>
+					<li>Collection of Data</li>
+					<li>Analysis of Data</li>
+					<li>Interpretations and Generalisations</li>
+					<li>Preparation of Research Report or Presentation of Results</li>
+				</ul><br>
+				<p>Due to the vague nature of the research process and lack of clear precise guidance the neo-researcher keeps searching for suitable options and experiments by trial and error method to achieve his research objectives.</p><p> Sometimes it gets frustrating and results in quitting it half way through. This is where ‘NOBLE Institute of Research Guidance’ steps in.</p></td></tr>
+		</table>
+		</div>
+
+		<div class="ms-section" id="right3">
+			<table style="font-family: Open Sans; text-align:center;" width="100%" cellpadding="25">
+			<tr><td><h2 style="text-align:center; font-family:PT Sans Caption">Our Mission</h2>
+				<br><p>Research contributes to the progress of a society and thus a nation. We aim to boost an ingenuous research culture to answer the problems of the society and make research an inclusive part of everyday life.</p></td></tr>
+				<tr><td><h2 style="text-align:center; font-family:PT Sans Caption">Our Activities</h2><br>
+				<ul style="text-align:left">
+					<li>Individual research guidance and problem solving</li>
+					<li>Organisation of guidance seminars</li>
+					<li>Facilitation of preparation of research and review papers</li>
+					<li>Rectification of dissertation chapters</li>
+				</ul></td></tr>
+			</table>		
+		</div>
+
+		<div class="ms-section" id="right4">
+			<p style="font-size:170%; text-align: center"><font style="font-family:Lobster">"Research is formalized curiosity;<br>It is poking and prying with a purpose"</font>
+			<br><font style="font-size:70%;">-Zora Neale Hurston</font></p>
+		</div>
+	</div>	
+</div>
+
+</body>
+</html>
